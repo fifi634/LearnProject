@@ -18,3 +18,6 @@ Version : 0.0.6
 
 ## administration system ##
 Version : 0.0.7
+
+## Blog ##
+Version : 0.0.8
