@@ -7,3 +7,5 @@ Version : 0.0.2
 ## pages jeux : deviner et nsfw ##
 Version : 0.0.3
 
+## pages pizzas et glaces ##
+Version : 0.0.4
