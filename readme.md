@@ -12,3 +12,6 @@ Version : 0.0.4
 
 ## livre d'or ##
 Version : 0.0.5
+
+## News Letter ##
+Version : 0.0.6
