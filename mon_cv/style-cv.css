@@ -1,0 +1,134 @@
+/* Police */
+@font-face {
+    font-family: 'BaksoSapi';
+    src: url('fonts/BaksoSapi.otf') format('otf');
+}
+@font-face {
+    font-family: 'FiraSans';
+    src: url('fonts/FiraSans-Book.otf') format('otf');
+}
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('fonts/OpenSans-Regular-webfont.eot');
+    src: url('fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-Regular-webfont.woff2') format('woff2'),
+         url('fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Générale */
+body
+{
+    /*background-image: url("images/image-fond-bleu.jpg");*/
+    background-color: rgb(255, 255, 255);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+    align-content: center;
+}
+
+/* Identité */
+
+.header
+{
+    max-width: 700px;
+    border: 1px black solid;
+    border-radius: 30px;
+    margin:auto;
+    padding: 1em;
+    background-color:#fffffb
+}
+
+.identity
+{   
+    float: left;
+    border-radius: 30px;
+    text-align:left;
+    width: auto;
+    margin: 15px;
+}
+
+/* Titres */
+
+h1
+{
+    color:rgb(20, 83, 220);
+    font-size:3em;
+    font-weight: 600;
+    font-family: BaksoSapi, calibri, "arial black", arial, sans-serif;
+    text-shadow: 6px 6px 20px rgb(231, 142, 58);
+    padding-left: 30px;
+}
+
+h2
+{
+    color:rgb(20, 83, 220);
+    font-size:2em;
+    font-family:BaksoSapi, calibri, "arial black", arial, sans-serif;
+    font-style: oblique;
+    text-decoration: overline;  
+    margin : 2em;  
+}
+
+/* Listes à puces */
+
+.corp
+{
+    clear: both;
+}
+
+.ul-cv
+{
+    font-family:FiraSans, open_sansregular, calibri, arial, sans-serif;
+    border-radius : 30px;
+    box-shadow: 6px 6px 30px black;
+    background-color:#fffffb;
+    max-width: 1000px;
+    padding: 25px;
+    padding-left: 30px;
+    margin: 30px;
+}
+li:hover
+{
+    border-left: 2px rgba(0,0,0,0) solid;
+}
+
+/* Informations importantes */
+
+.strong_cv
+{
+    font-weight: bold;
+    color:rgb(20, 83, 220);
+    text-shadow: 2px 2px 20px rgb(231, 142, 58)
+}
+
+.date
+{
+    font-weight: bold;    
+}
+
+/* liens */
+
+.a_cv:hover{
+    text-decoration: overline;
+    font-weight: bold;
+}
+.a_cv:active
+{
+    background-color: #FEC6C6;
+}
+.a_cv:visited
+{
+    color:rgb(20, 83, 220);
+}
+.a_cv
+{
+    color:rgb(20, 83, 220);
+}
