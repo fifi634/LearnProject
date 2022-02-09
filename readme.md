@@ -21,3 +21,6 @@ Version : 0.0.7
 
 ## Blog ##
 Version : 0.0.8
+
+## Mon CV ##
+Version : 0.0.9
