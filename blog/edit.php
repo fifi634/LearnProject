@@ -1,47 +1,47 @@
 <?php 
-$pdo = new PDO('sqlite:../data/dataBlog.db', null, null, [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
-]);
-$error = null;
-$success = null;
-
-try 
-{
-    //modification article
-    if(isset($_POST['name'], $_POST['content']))
-    {
-        $query = $pdo->prepare('UPDATE posts SET name= :name, content= :content WHERE id= :id');
-        $query->execute([
-            'name' => $_POST['name'],
-            'content' => $_POST['content'],
-            'id' => $_GET['id']
-        ]);
-        $success = 'Votre article à bien été modifié';
-    }
-    //suppression article
-    if(isset($_POST['delete']))
-    {
-        $query = $pdo->prepare('DELETE FROM posts WHERE id= :id');
-        $query->execute([
-            'id' => $_GET['id']
-        ]);
-        header('Location: /blog');
-        exit('Article supprimé');
-    }
-    //affichage article
-    $query = $pdo->prepare('SELECT * FROM posts WHERE id= :id');
-    $query->execute([
-        'id' => $_GET['id']
+    $pdo = new PDO('sqlite:../data/dataBlog.db', null, null, [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
     ]);
-    $post = $query->fetch();
-} catch(PDOException $e)
-{
-    $error = $e->getMessage();
-}
+    $error = null;
+    $success = null;
 
-$title = "Le blog - édition";
-require '../elements/header.php'; 
+    try 
+    {
+        //modification article
+        if(isset($_POST['name'], $_POST['content']))
+        {
+            $query = $pdo->prepare('UPDATE posts SET name= :name, content= :content WHERE id= :id');
+            $query->execute([
+                'name' => $_POST['name'],
+                'content' => $_POST['content'],
+                'id' => $_GET['id']
+            ]);
+            $success = 'Votre article à bien été modifié';
+        }
+        //suppression article
+        if(isset($_POST['delete']))
+        {
+            $query = $pdo->prepare('DELETE FROM posts WHERE id= :id');
+            $query->execute([
+                'id' => $_GET['id']
+            ]);
+            header('Location: /blog');
+            exit('Article supprimé');
+        }
+        //affichage article
+        $query = $pdo->prepare('SELECT * FROM posts WHERE id= :id');
+        $query->execute([
+            'id' => $_GET['id']
+        ]);
+        $post = $query->fetch();
+    } catch(PDOException $e)
+    {
+        $error = $e->getMessage();
+    }
+
+    $title = "Le blog - édition";
+    require '../elements/header.php'; 
 ?>
 
 <div class="container">

@@ -27,3 +27,6 @@ Version : 0.0.9
 
 ## API Météo ##
 Version : 0.0.10
+
+## Ajout de NameSpace
+Version : 0.1.0
