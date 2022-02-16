@@ -1,4 +1,6 @@
 <?php
+  namespace Fifi\Counter;
+  
     class Counter
     {
         const INCREMENT = 1;

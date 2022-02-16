@@ -1,4 +1,6 @@
 <?php
+    use Fifi\Guestbook\GuestBook;
+    use Fifi\Guestbook\Message;
     require_once 'class/guestbook/GuestMessage.php';
     require_once 'class/guestbook/GuestBook.php';
     $errors = null;

@@ -2,6 +2,9 @@
     //Météo
     declare(strict_types=1);
     require_once 'class/OpenWeather.php';
+    use \Fifi\Exceptions\{
+        CurlException,
+        HTTPException};
     $error = null;
     $weather = new OpenWeather('10a0d52e9d44e34de519064bcf7ee006');
     try 

@@ -1,4 +1,8 @@
 <?php
+    namespace Fifi\Guestbook;
+    use \DateTime;
+    use \DateTimeZone;
+
     class Message 
     {
         const LIMITE_USERNAME = 3;

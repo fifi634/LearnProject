@@ -1,4 +1,7 @@
 <?php
+    namespace Fifi\Blog;
+    use \DateTime;
+
 class Post {
 
     public $id;
