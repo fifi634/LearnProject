@@ -1,6 +1,10 @@
     </body>
 
     <?php 
+        use Fifi\Counter\{
+            Counter,
+            Dashcount};
+
         require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'menu.php';
         require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'counter' . DIRECTORY_SEPARATOR . 'Counter.php';
         require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'counter' . DIRECTORY_SEPARATOR . 'Dashcount.php';

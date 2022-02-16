@@ -1,4 +1,6 @@
 <?php
+    namespace Fifi\Counter;
+    
     require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'counter' . DIRECTORY_SEPARATOR . 'Counter.php';
 
     /** COMPTEUR DASHBOARD */

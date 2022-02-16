@@ -1,4 +1,6 @@
 <?php
+    namespace Fifi\Guestbook;
+
     require_once 'GuestMessage.php';
     class GuestBook
     {
