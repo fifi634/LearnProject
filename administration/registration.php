@@ -53,7 +53,10 @@
                 ]);
 
                 //REDIRECTION CAR OK
+                $_SESSION['auth'] = true;
                 $_SESSION['success'] = "compte modifié";
+                $_SESSION['age'] = (int)htmlentities($_POST['age']);
+                $_SESSION['user'] = htmlentities($_POST['nickname']);
                 header('Location: /administration/admin.php');
                 exit('modif ok, redirection failed');    
             }   

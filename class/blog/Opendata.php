@@ -1,6 +1,4 @@
 <?php
-    namespace Fifi\Blog;
-    use \PDO;
 
 class Opendata
 {
