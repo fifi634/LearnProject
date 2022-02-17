@@ -1,7 +1,4 @@
 <?php 
-    require_once '../class/blog/Post.php';
-    require_once '../class/blog/Opendata.php';
-
     $pdo = new PDO('sqlite:../data/dataBlog.db', null, null, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ

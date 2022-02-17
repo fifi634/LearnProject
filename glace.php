@@ -1,4 +1,7 @@
 <?php
+    require 'vendor/autoload.php';
+    use Fifi\Form;
+
     $title = 'la glace';
     require_once 'elements/header.php'; 
     require_once __DIR__ . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'Form.php';

@@ -1,4 +1,6 @@
 <?php
+  namespace Fifi;
+  
     class Form
     {
         public static $class = "";

@@ -1,4 +1,6 @@
 <?php 
+    namespace Fifi;
+    
     class dashboard
     {
         protected $link;

@@ -1,9 +1,12 @@
 <?php 
-    require_once '../class/blog/Post.php';
-    require_once '../class/blog/Opendata.php';
+    require '../vendor/autoload.php';
+    use Fifi\Blog\Post;
 
-    /*$pdo = new Opendata('../data/dataBlog.db');
+    /* test ouverture database par class :
+    use Fifi\Blog\Opendata;
+    $pdo = new Opendata('../data/dataBlog.db');
     $pdo = $pdo->getPDO();*/
+
     $pdo = new PDO('sqlite:../data/dataBlog.db', null, null, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
@@ -26,7 +29,7 @@
         }
         $query = $pdo->query('SELECT * FROM posts');
         /** @var Post[] : cette variable est un tableau d'article */
-        $posts = $query->fetchAll(PDO::FETCH_CLASS, 'Post');
+        $posts = $query->fetchAll(PDO::FETCH_CLASS, Post::class); //Post::class pour utiliser Post en chaine de caractère pour namespace
     } catch(PDOException $e)
     {
         $error = $e->getMessage();

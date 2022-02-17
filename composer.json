@@ -1,0 +1,16 @@
+{
+    "name": "cohen/php-learn-project",
+    "description": "apprentissage php",
+    "autoload": {
+        "psr-4": {
+            "Fifi\\": "class/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Philippe Cohen",
+            "email": "cohen.philippe@lilo.org"
+        }
+    ],
+    "require": {}
+}

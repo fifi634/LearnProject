@@ -1,7 +1,15 @@
 <?php
-require_once 'exceptions/CurlException.php';
-require_once 'exceptions/HTTPException.php';
-require_once 'exceptions/UnauthorizedHTTPException.php';    
+    namespace Fifi;
+    use Fifi\Exceptions\{
+        CurlException,
+        HTTPException,
+        UnauthorizedHTTPException
+    };
+    use \DateTime;
+
+    require_once 'Exceptions/CurlException.php';
+    require_once 'Exceptions/HTTPException.php';
+    require_once 'Exceptions/UnauthorizedHTTPException.php';    
     /**
      * API "OpenWeather" récupére la météo
      * 
@@ -76,7 +84,7 @@ require_once 'exceptions/UnauthorizedHTTPException.php';
         {
             $curl = curl_init("https://api.openweathermap.org/data/2.5/{$endpoint}&appid={$this->apiKey}&units=metric&lang=fr&exclude=minutely,hourly,alerts,current");
             curl_setopt_array($curl, [
-                CURLOPT_CAINFO => dirname(__DIR__) . DIRECTORY_SEPARATOR . 'OpenWeathermap-org.pem',
+                CURLOPT_CAINFO => dirname(__DIR__) . DIRECTORY_SEPARATOR . 'meteo' . DIRECTORY_SEPARATOR . 'OpenWeathermap-org.pem',
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_TIMEOUT => 1
             ]);
