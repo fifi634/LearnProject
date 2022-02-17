@@ -1,8 +1,16 @@
 <?php
     declare(strict_types=1);
-    require_once '../class/OpenWeather.php';
+    require 'vendor/autoload.php';
+
+    use Fifi\Exceptions\{
+        CurlException,
+        HTTPException
+    };
+    use Fifi\OpenWeather;
+
     $error = null;
     $weather = new OpenWeather('10a0d52e9d44e34de519064bcf7ee006');
+
     try 
     {
         $forecast = $weather->getForecast('42.7057991028','3.0085299015');
